@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Kalanjiyam Org.</title>
+	<link rel="icon" href="img/kalanjiyam-logo.png" type="image/gif" >  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="manifest" href="manifest.webmanifest"/>
+	<style> 
+	@font-face {
+      font-family: klge;
+      src: url(Gugi-Regular.ttf) format('truetype');
+    }
+	@font-face {
+      font-family: klgt;
+      src: url(TAM96.TTF) format('truetype');
+    }	
+	html {
+	  height: auto;
+	  background-image: url("img/triangle_pattern.png");	
+	  overflow-y:scroll;
+	  overflow-x:hidden;
+	  text-align:center;
+	}
+
+	body {
+	  height: inherit;
+	  margin: 0;
+	}
+	#a{
+	  height:30vh;
+	  width:100vw;	  
+	}
+	
+	#a p{
+		margin:0;
+	}
+	
+	#a p:nth-child(1){
+	    margin-top:50px;
+		font-family:klgt;
+		font-size:50px;		
+	}
+	#cnt, #a p:nth-child(2){
+		font-family:klge; 
+		font-size:25px;
+	}
+	
+	#cnt{		
+		text-align: left;
+		transition: visibility 0s, opacity 0.5s linear;
+	}
+	
+	
+	#a #a1:hover{ 
+		-webkit-filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5));      
+		filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5));  
+		//filter: invert(50%);
+	}	
+	#a1 img {
+		height: 100%;
+		object-fit: cover;
+	  }
+	 
+	#ex1 a {
+		color: #fff;
+		font-weight: 700;
+		transition-duration: .2s;
+		text-decoration: none;
+		border-bottom: 2px solid transparent;
+			border-bottom-color: transparent;
+	}
+	
+	a.btn {
+		color: #fff;
+		background: #FF0066;
+		padding: .5rem 1rem;
+		display: inline-block;
+		border-radius: 4px;
+		transition-duration: .25s;
+		border: none;
+		font-size: 14px;
+    }
+	
+	.card {
+	  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);	 
+	  margin: auto;
+	  text-align: center;
+	  font-family: arial;
+	}
+
+	.title {
+	  color: grey;
+	}
+
+	#add {
+	  border: none;
+	  outline: 0;
+	  display: inline-block;
+	  padding-top: 8px;		
+	  padding-bottom: 8px;	
+	  color: white;
+	  background-color: #000;
+	  text-align: center;
+	  cursor: pointer;
+	  width: 100%;
+	}
+
+	a {
+	  text-decoration: none;
+	  color: black;
+	}
+
+	#add:hover, a:hover {
+	  opacity: 0.7;
+	}
+	
+
+/* #### Desktops #### */
+@media only screen and (min-width: 1024px) {
+    p{
+		font-family:klgt; 
+		font-size:25px;
+	}
+	#a p:nth-child(1){
+	    margin-top:50px;
+		font-family:klgt;
+		font-size:50px;		
+	}
+	#a p:nth-child(2){
+		font-family:klge; 
+		font-size:25px;
+	}
+	
+	#a #a1{	   
+	   position:fixed;
+	   width:50px;
+       height:50px;
+	   right:50px;
+	   bottom:50px;
+	   border-radius:50%;
+	}
+	#a1 img{width:100%; height:100%;}
+
+	
+	#ex1{
+	  max-width: 300px;
+	} 
+	.card {	 
+	  max-width: 300px;
+	  margin: auto;	  
+	}
+	.title {
+	  font-size: 18px;
+	}
+
+	#add {
+	  font-size: 18px;
+	}
+
+	a {
+	  font-size: 22px;
+	}
+	#a1 {
+	position : fixed;
+	bottom:10px;
+	left : 10px;
+	}
+	table{font-family:klgt;font-size:25px;text-align:left;padding:50px;}
+	td{padding:20px;}
+	.cnt{
+		height:50px;
+		width:100vw;
+		position:fixed;
+		bottom:0;
+		left:0;
+		background-color:#fff;
+	}
+	.cnt center{margin-top:5px;}
+	#a1{
+	background-color: #fff;
+	}
+	
+}
+
+/* #### Mobile Phones Portrait #### */
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+    p{
+		font-family:klgt; 
+		font-size:50px;
+	}
+	#a p:nth-child(1){
+	    margin-top:75px;
+		font-family:klgt;
+		font-size:75px;		
+	}
+	#a p:nth-child(2){
+		font-family:klge; 
+		font-size:35px;
+	}
+
+	#list{ margin-top:15vh; margin-left:50px; font-size: 35px;}
+	
+	#a #a1{	   
+	   position:fixed;
+	   width:10vw;       
+	   right:50px;
+	   bottom:100px;
+	   border-radius:50%;
+	}
+	
+	 #a1 img{ width:10vw; }
+	 
+	 #ex1{
+	  max-width: 80vw;
+	  max-height: 80vh;
+	} 
+	.card {	 
+	  max-width: 80vw;
+	  margin: auto;	  
+	}
+    .title {
+	  font-size: 36px;
+	}
+
+	#add {
+	  font-size: 36px;
+	}
+
+	a {
+	  font-size: 40px;
+	}
+	h3{font-size: 45px;}
+	#ex1 p{
+	 font-size: 40px;
+	}
+    table{font-family:klgt;font-size:50px;text-align:left;padding:10px;}
+	td{padding:20px;}	
+	.cnt{
+		height:100px;
+		width:100vw;
+		position:fixed;
+		bottom:0;
+		left:0;
+		background-color:#fff;
+	}
+	.cnt center{margin-top:20px;}
+	#a1{
+	background-color: #fff;
+	}
+}
+
+/* #### Mobile Phones Landscape #### */
+@media screen and (max-device-width: 640px) and (orientation: landscape){
+   /* some CSS here */
+}
+
+/* #### Mobile Phones Portrait or Landscape #### */
+@media screen and (max-device-width: 640px){
+
+}
+
+/* #### iPhone 4+ Portrait or Landscape #### */
+@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
+  /* some CSS here */
+}
+
+/* #### iPhone 5 Portrait or Landscape #### */
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
+  /* some CSS here */
+}
+
+/* #### iPhone 6 and 6 plus Portrait or Landscape #### */
+@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3){
+  /* some CSS here */
+}
+
+/* #### Tablets Portrait or Landscape #### */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px){
+  p{
+		font-family:klgt; 
+		font-size:25px;
+	}
+	#a p:nth-child(1){
+	    margin-top:50px;
+		font-family:klgt;
+		font-size:50px;		
+	}
+	#a p:nth-child(2){
+		font-family:klge; 
+		font-size:25px;
+	}
+	
+	#a #a1{	   
+	   position:fixed;
+	   width:50px;
+       height:50px;
+	   right:50px;
+	   bottom:50px;
+	   border-radius:50%;
+	}
+	#a1 img{width:100%; height:100%;}
+
+	
+	#ex1{
+	  max-width: 300px;
+	} 
+	.card {	 
+	  max-width: 300px;
+	  margin: auto;	  
+	}
+	.title {
+	  font-size: 18px;
+	}
+
+	#add {
+	  font-size: 18px;
+	}
+
+	a {
+	  font-size: 22px;
+	}
+	#a1 {
+	position : fixed;
+	bottom:10px;
+	left : 10px;
+	}
+	table{font-family:klgt;font-size:25px;text-align:left;padding:50px;}
+	td{padding:20px;}
+	.cnt{
+		height:50px;
+		width:100vw;
+		position:fixed;
+		bottom:0;
+		left:0;
+		background-color:#fff;
+	}
+	.cnt center{margin-top:5px;}
+	#a1{
+	background-color: #fff;
+	}
+	
+}
+}			
+	</style>
+    
+    
+  </head>
+  <body>
+   <div id="a">
+   <p>ðE G¬ø¾ Mö£ </p> 
+   <div id="a1"><a href="#ex1" rel="modal:open"><img src="img/user.png" alt="Contact"></a></div>
+   <img src="flowers-png-2.png" alt="Kalanjiyam" style="position : fixed; top:0; left:0;width:200px;height:200px; transform:rotate(90deg)">
+	<br><br><br>
+	<table>
+	<tr><td>ï£œ</td><td>:</td><td>28-06-2019 ªõœO‚Aö¬ñ </td></tr>
+	<tr><td>«ïó‹</td><td>:</td><td>ñ£¬ô 5 ñE ºî™ 8 ñE õ¬ó </td></tr>
+	<tr><td>Þì‹</td><td>:</td><td><span style="font-family:klge;">Madurai Senior Citizen's Forum,</span>
+Mvõï£î¹ó‹ , ñ¶¬ó - 14</td></tr>
+	</tr>
+	</table>
+	<br><br><br>
+	<p> îƒèO¡ õ£›ˆ¶‚èÀ‹ õ¼¬è»«ñ âù‚° ªõ°ñF.<br><br>
+	«î£ö¬ñ»ì¡ <br>
+	º. óM‚°ñ£˜  <br>
+	F¼Šðóƒ°¡ø‹ A¬÷<br>
+	</p>
+	
+	<br><br><br><br>
+	<h3 style="font-family:klge;">Get Directions  &#8659</h3>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d982.4476655942677!2d78.12636262914852!3d9.951367899555303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c5e4095b4e73%3A0xdfd0b549b6fbb9cf!2sMadurai+Senior+Citizen&#39;s+Forum!5e0!3m2!1sen!2sin!4v1560100448346!5m2!1sen!2sin&z=10" width="800" height="1000" frameborder="10" style="border:0" allowfullscreen></iframe>
+	<br><br><br><br><br><br><br><br>
+	<div id="cnt" class="cnt">
+	<center><a href="https://jeyanthrkv.github.io/kalanjiyam/">Dev. By Kalanjiyam</a></center>
+	</div>
+	
+	</div>
+    <button hidden class="add-button">Add to home screen</button>
+  </body>
+  
+  <!-- Modal HTML embedded directly into document -->
+<div id="ex1" class="modal">
+<div class="card">
+  <img src="ravikumar.jpg" alt="Ravikumar" style="width:100%">
+  <h3>Ravikumar M.</h3>
+  <p class="title">Sr. TM, TNSTC</p>
+  <p>+91-99424 30229</p>
+  <!--  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+  </div>-->
+  <p><a id="add" href="ravikumar.vcf" >Add to Contact</a></p>  
+</div>
+ 
+  <!-- <a class="btn" href="#" rel="modal:close">Close</a> -->
+</div>
+
+</html>
