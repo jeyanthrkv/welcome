@@ -1,19 +1,6 @@
 BEGIN:VCARD
-VERSION:3.0
-N:M.;Ravikumar;;;
-FN:Ravikumar M.
-ORG:;
-TITLE:
-EMAIL;TYPE=PREF,INTERNET:
-TEL;TYPE=CELL,voice:099424 30229
-TEL;TYPE=WORK,voice:
-TEL;TYPE=WORK,fax:
-ADR;TYPE=WORK;type=pref:;;Krishnapuram Colony;Madurai;;625014;India
-URL:https://jeyanthrkv.github.io/kalanjiyam
-
-PHOTO;TYPE=JPG;ENCODING=
-
-NOTE: 
-
-REV:2008-04-24T19:52:43Z
+VERSION:2.1
+N:; Ravikumar M.;;;
+FN: Ravikumar M.
+TEL;CELL;PREF:09942430229
 END:VCARD
